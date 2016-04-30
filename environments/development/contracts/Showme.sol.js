@@ -5,10 +5,10 @@
 (function() {
 
   var contract_data = {
-    abi: [{"constant":false,"inputs":[],"name":"getOwner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"}],
-    binary: "606060405260668060106000396000f3606060405260e060020a6000350463893d20e8811460245780638da5cb5b146048575b005b60005473ffffffffffffffffffffffffffffffffffffffff165b6060908152602090f35b603e60005473ffffffffffffffffffffffffffffffffffffffff168156",
-    unlinked_binary: "606060405260668060106000396000f3606060405260e060020a6000350463893d20e8811460245780638da5cb5b146048575b005b60005473ffffffffffffffffffffffffffffffffffffffff165b6060908152602090f35b603e60005473ffffffffffffffffffffffffffffffffffffffff168156",
-    address: "0x76c60095b287678575048029f52696631683b7e9",
+    abi: [{"constant":false,"inputs":[],"name":"getOwner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[],"name":"getOrigin","outputs":[{"name":"","type":"address"}],"type":"function"}],
+    binary: "6060604052606b8060106000396000f3606060405260e060020a6000350463893d20e88114602e5780638da5cb5b146040578063df1f29ee146051575b005b6058600054600160a060020a03165b90565b6058600054600160a060020a031681565b605832603d565b600160a060020a03166060908152602090f3",
+    unlinked_binary: "6060604052606b8060106000396000f3606060405260e060020a6000350463893d20e88114602e5780638da5cb5b146040578063df1f29ee146051575b005b6058600054600160a060020a03165b90565b6058600054600160a060020a031681565b605832603d565b600160a060020a03166060908152602090f3",
+    address: "0x76404526974170af53257c68021bf6d73f705c5c",
     generated_with: "2.0.6",
     contract_name: "Showme"
   };

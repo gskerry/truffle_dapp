@@ -1,5 +1,5 @@
 
-function getOwner(){
+function showme(){
 
 	var showme = Showme.deployed();
 
@@ -11,5 +11,15 @@ function getOwner(){
 			console.log(e);
 			setStatus("Error getting owner; see log.");
 	});
+
+	showme.getOrigin.call()
+		.then(function(origin) {
+			var origin_element = document.getElementById("txorigin");
+			origin_element.innerHTML = origin;
+		}).catch(function(e) {
+			console.log(e);
+			setStatus("Error getting owner; see log.");
+	});
+
 
 }
