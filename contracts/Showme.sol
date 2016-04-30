@@ -16,6 +16,10 @@ contract Showme {
 		return msg.sender;
 	}
 
-
+	function destroy(){
+		if(msg.sender == owner){
+			suicide(owner);
+		}
+	}
 
 }
