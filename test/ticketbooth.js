@@ -18,6 +18,8 @@ contract('Ticketbooth', function(accounts) {
 					function(quota) {
 						console.log("retrieved quota:",quota);
 						assert.equal(quota, 500, "Quota doesn't match!"); 
+					done();   // to stop these tests earlier, move this up
+					
 					}).then( function() {
 						return ticketbooth.numRegistrants.call();
 					}).then( function(num) {
@@ -25,7 +27,6 @@ contract('Ticketbooth', function(accounts) {
 						return ticketbooth.organizer.call();
 					}).then( function(organizer) {
 						assert.equal(organizer, accounts[0], "Owner doesn't match!");
-						done();   // to stop these tests earlier, move this up
 					}).catch(done);
 				}).catch(done);
 	});
