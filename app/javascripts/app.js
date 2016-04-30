@@ -49,7 +49,14 @@ window.onload = function() {
     }
 
     accounts = accs;
+
+    var acctdisplay = document.getElementById("accounts");
+    acctdisplay.innerHTML = accounts;
+
     account = accounts[0];
+
+    var mainacct = document.getElementById("mainacct");
+    mainacct.innerHTML = account;
 
     refreshBalance();
   });

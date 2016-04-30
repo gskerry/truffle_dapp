@@ -3,8 +3,8 @@ contract Showme {
 	
 	address public owner;
 
-	function getOwner() {
-		return onwer;
+	function getOwner() returns(address) {
+		return owner;
 	}
 
 }
