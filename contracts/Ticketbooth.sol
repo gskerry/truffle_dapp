@@ -13,7 +13,7 @@ contract Ticketbooth {
 	event Deposit(address _from, uint _amount); // (!) optional... just logged in EVM logs
 	event Refund(address _to, uint _amount);
 
-	function Conference(){
+	function Ticketbooth(){
 		owner = msg.sender;
 		quota = 500;
 		numRegistrants = 0;
