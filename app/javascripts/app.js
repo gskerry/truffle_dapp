@@ -54,7 +54,7 @@ window.onload = function() {
     var acctdisplay = document.getElementById("accounts");
     acctdisplay.innerHTML = accounts;
 
-    account = accounts[0];
+    account = accounts[1];
 
     var mainacct = document.getElementById("mainacct");
     mainacct.innerHTML = account;
