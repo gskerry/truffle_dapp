@@ -11,6 +11,7 @@ function refreshBalance() {
   var meta = MetaCoin.deployed();
 
   meta.getBalance.call(account, {from: account}).then(function(value) {
+    // {from: variable} --> is this truffle syntax?
     var balance_element = document.getElementById("balance");
     balance_element.innerHTML = value.valueOf();
   }).catch(function(e) {

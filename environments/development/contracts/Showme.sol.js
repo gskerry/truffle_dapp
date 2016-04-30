@@ -8,7 +8,7 @@
     abi: [{"constant":false,"inputs":[],"name":"getOwner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"}],
     binary: "606060405260668060106000396000f3606060405260e060020a6000350463893d20e8811460245780638da5cb5b146048575b005b60005473ffffffffffffffffffffffffffffffffffffffff165b6060908152602090f35b603e60005473ffffffffffffffffffffffffffffffffffffffff168156",
     unlinked_binary: "606060405260668060106000396000f3606060405260e060020a6000350463893d20e8811460245780638da5cb5b146048575b005b60005473ffffffffffffffffffffffffffffffffffffffff165b6060908152602090f35b603e60005473ffffffffffffffffffffffffffffffffffffffff168156",
-    address: "0x97c251c212efd64720b5b8d884f5b9e317ad68cd",
+    address: "0x76c60095b287678575048029f52696631683b7e9",
     generated_with: "2.0.6",
     contract_name: "Showme"
   };
