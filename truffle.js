@@ -13,6 +13,7 @@ module.exports = {
   deploy: [
     "MetaCoin",
     "Showme",
+    "Ticketbooth",
     "ConvertLib"
   ],
   rpc: {
