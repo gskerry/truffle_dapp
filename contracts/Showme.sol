@@ -12,8 +12,10 @@ contract Showme {
 		return owner;
 	}
 
-	function getOrigin () returns(address) {
-		return tx.origin;
+	function getSender () returns(address) {
+		return msg.sender;
 	}
+
+
 
 }

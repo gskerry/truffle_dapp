@@ -12,10 +12,10 @@ function showme(){
 			setStatus("Error getting owner; see log.");
 	});
 
-	showme.getOrigin.call()
-		.then(function(origin) {
-			var origin_element = document.getElementById("txorigin");
-			origin_element.innerHTML = origin;
+	showme.getSender.call()
+		.then(function(sender) {
+			var sender_element = document.getElementById("txsender");
+			sender_element.innerHTML = sender;
 		}).catch(function(e) {
 			console.log(e);
 			setStatus("Error getting owner; see log.");
