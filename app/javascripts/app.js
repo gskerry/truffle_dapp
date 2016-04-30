@@ -1,6 +1,7 @@
 var accounts;
 var account;
 var balance;
+var ethbal
 
 function setStatus(message) {
   var status = document.getElementById("status");
@@ -19,6 +20,17 @@ function refreshBalance() {
     setStatus("Error getting balance; see log.");
   });
 };
+
+/* THIS ONE!  */
+
+function refreshETHBalance() {
+  web3.eth.getBalance(account, function(value) {
+    console.log("Value: ",value)
+    var ethbalance_element = document.getElementById("ethbalance");
+    ethbalance_element.innerHTML = ethbal;
+  })
+};
+
 
 function sendCoin() {
   var meta = MetaCoin.deployed();
@@ -59,6 +71,10 @@ window.onload = function() {
     var mainacct = document.getElementById("mainacct");
     mainacct.innerHTML = account;
 
+    ethbal = web3.eth.getBalance(account);
+
     refreshBalance();
+    refreshETHBalance();
+
   });
 }
