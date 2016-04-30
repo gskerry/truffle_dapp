@@ -2,7 +2,8 @@ module.exports = {
   build: {
     "index.html": "index.html",
     "app.js": [
-      "javascripts/app.js"
+      "javascripts/app.js",
+      "javascripts/myapp.js"
     ],
     "app.css": [
       "stylesheets/app.css"
@@ -11,6 +12,7 @@ module.exports = {
   },
   deploy: [
     "MetaCoin",
+    "Showme",
     "ConvertLib"
   ],
   rpc: {
