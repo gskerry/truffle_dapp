@@ -12,7 +12,7 @@ function showme(){
 			setStatus("Error getting owner; see log.");
 	});
 
-	showme.getSender.call()
+	showme.getSender.call({from: account})
 		.then(function(sender) {
 			var sender_element = document.getElementById("txsender");
 			sender_element.innerHTML = sender;

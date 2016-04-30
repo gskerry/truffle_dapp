@@ -6056,7 +6056,7 @@ window.onload = function() {
     var acctdisplay = document.getElementById("accounts");
     acctdisplay.innerHTML = accounts;
 
-    account = accounts[0];
+    account = accounts[1];
 
     var mainacct = document.getElementById("mainacct");
     mainacct.innerHTML = account;
@@ -6080,7 +6080,7 @@ function showme(){
 			setStatus("Error getting owner; see log.");
 	});
 
-	showme.getSender.call()
+	showme.getSender.call({from: account})
 		.then(function(sender) {
 			var sender_element = document.getElementById("txsender");
 			sender_element.innerHTML = sender;
