@@ -2,23 +2,54 @@
 <html>
 <head>
   <title>MetaCoin - Default Truffle App</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
   <link href="./app.css" rel='stylesheet' type='text/css'>
   <script src="./app.js"></script>
   <script src="./myapp.js"></script>
 </head>
+
 <body>
-
-  <h1>Network Stats</h1>
   
-  <h4>Accounts:</h4>
-  <p id="accounts"></p>
+  <div class="panel panel-default">
+    <div class="panel-heading">Network Summary</div>
+      <table class="table">
+          <!-- <thead> 
+            <tr> 
+              <th>#</th> 
+              <th>First Name</th> 
+              <th>Last Name</th> 
+              <th>Username</th> 
+            </tr> 
+          </thead>  -->
+          <tbody> 
+            <tr> 
+                <th scope="row">Accounts:</th> 
+                <td id="accounts"></td> 
+            </tr> 
+            <tr> 
+                <th scope="row">Current Account:</th> 
+                <td id="mainacct"></td> 
+            </tr>   
+            <tr> 
+                <th scope="row">Coinbase:</th> 
+                <td id="coinbase"></td> 
+            </tr>   
+          </tbody> 
 
-  <h4>Account:</h4>
-  <p id="mainacct"></p>
+      </table>
+  </div>
 
-  <h4>Coinbase:</h4>
-  <p id="coinbase"></p>
 
   <h4>Account balances:</h4>
   
