@@ -29,18 +29,18 @@ h1, h2 {
   display: inline-block;
   vertical-align: middle;
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
 }
 
 h2 {
-  color: #AAA;
-  font-size: 32px;
+/*  color: #AAA;*/
+  font-size: 24px;
 }
 
 h3 {
   font-weight: normal;
   color: #AAA;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .black {
@@ -49,4 +49,14 @@ h3 {
 
 #balance {
   color: black;
+}
+
+
+body {
+  margin-left: 3%;
+  margin-right: 5%;
+  margin-top: 3%;
+  font-family: "Open Sans", sans-serif;
+  word-wrap: break-word;
+
 }
