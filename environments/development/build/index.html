@@ -22,8 +22,6 @@
 </head>
 
 <body>
-
-  <h1>Network Summary</h1>
   
   <div class="panel panel-default">
     <div class="panel-heading">Network Summary</div>
@@ -54,26 +52,48 @@
       </table>
   </div>
 
-  <h4>Accounts:</h4>
-  <p id="accounts"></p>
+  <div class="panel panel-default">
+    <div class="panel-heading">Account Balances</div>
+      <table class="table">
+          <thead> 
+            <tr> 
+              <th>Account</th> 
+              <th>MetaCoin</th> 
+              <th>Wei</th> 
+            </tr> 
+          </thead> 
+          <tbody> 
+            <tr> 
+                <th scope="row" id="mainacct"></th> 
+                <td id="balance"></td> 
+                <td id="ethbalance"></td> 
+            </tr> 
+          </tbody> 
 
-  <h4>Account:</h4>
-  <p id="mainacct"></p>
+      </table>
+  </div>
 
-  <h4>Coinbase:</h4>
-  <p id="coinbase"></p>
+  <div class="panel panel-default">
+    <div class="panel-heading">Transaction Execution Summary</div>
+      <table class="table">
+          <tbody> 
+            <tr> 
+                <th scope="row">Transaction Block</th> 
+                <td id="">??</td> 
+            </tr> 
+            <tr> 
+                <th scope="row">Transaction Owner:</th> 
+                <td id="owner"></td> 
+            </tr>   
+            <tr> 
+                <th scope="row">Initiated by:</th> 
+                <td id="txsender"></td> 
+            </tr>   
+          </tbody> 
 
-  <h4>Account balances:</h4>
-  
-  <h5>META: <span id="balance" class="black"></span></h5>
-  <h5>WEI: <span id="ethbalance" class="black"></span></h5>
-
-  <h1>Execute Contract</h1>
-  <h4>Transaction Owner:</h4>
-  <p id="owner"></p>
-  <h4>Transaction initiated by:</h4>
-  <p id="txsender"></p>
-  <button id="showme" onclick="showme()">Show my contract</button>
+      </table>
+  </div>
+  <button id="showme" onclick="showme()">Execute Transaction</button>
 
   <br>
   <h4>Metacoin Send</h4>
