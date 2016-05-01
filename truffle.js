@@ -12,6 +12,7 @@ module.exports = {
   deploy: [
     "MetaCoin",
     "Royalty",
+    "Policies",
     "Ticketbooth",
     "ConvertLib"
   ],

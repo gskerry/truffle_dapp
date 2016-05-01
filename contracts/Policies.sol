@@ -1,15 +1,15 @@
 
-contract Royalty {
+contract Policies {
 	
 	address public owner;
-	uint public royalty_rate
+	uint public royalty_rate;
 
-	function Royalty(){
+	function Policies(){
 		owner = msg.sender;
 	}
 
 
-	function getRate(uint rate) {
+	function setRate(uint newrate) {
 		if (msg.sender != owner){ return; }
 		royalty_rate = newrate;
 	}

@@ -1,3 +1,6 @@
+
+console.log("HELLO")
+
 var accounts;
 var account;
 var balance;
@@ -80,10 +83,6 @@ function showme(){
 
 }
 
-
-
-
-
 window.onload = function() {
   
   web3.eth.getAccounts(function(err, accs) {
@@ -115,7 +114,6 @@ window.onload = function() {
 
   });
 
-  
 
 /*  web3.eth.coinbase(function(err, result){
     var coinbase = document.getElementById("coinbase");
