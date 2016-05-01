@@ -5738,7 +5738,7 @@ var Pudding =
     abi: [{"constant":false,"inputs":[{"name":"amount","type":"uint256"},{"name":"conversionRate","type":"uint256"}],"name":"convert","outputs":[{"name":"convertedAmount","type":"uint256"}],"type":"function"}],
     binary: "606060405260358060106000396000f3650301c67926cf50606060405260e060020a600035046396e4ee3d81146024575b6007565b602435600435026060908152602090f3",
     unlinked_binary: "606060405260358060106000396000f3650301c67926cf50606060405260e060020a600035046396e4ee3d81146024575b6007565b602435600435026060908152602090f3",
-    address: "0x662d46305551cd8533c3c71ed1699186c3488ee6",
+    address: "0xbb1646d74c58802542eed912c2d3f7e9c2963a45",
     generated_with: "2.0.6",
     contract_name: "ConvertLib"
   };
@@ -5802,77 +5802,10 @@ var Pudding =
 (function() {
 
   var contract_data = {
-    abi: [{"constant":false,"inputs":[{"name":"addr","type":"address"}],"name":"getBalanceInEth","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"receiver","type":"address"},{"name":"amount","type":"uint256"}],"name":"sendCoin","outputs":[{"name":"sufficient","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"addr","type":"address"}],"name":"getBalance","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"inputs":[],"type":"constructor"}],
-    binary: "6060604052600160a060020a033216600090815260208190526040902061271090556101408061002f6000396000f3606060405260e060020a60003504637bd703e8811461003157806390b98a111461005c578063f8b2cb4f1461008b575b005b6100b1600435600073662d46305551cd8533c3c71ed1699186c3488ee66396e4ee3d6100fb84610092565b6100b160043560243533600160a060020a0316600090815260208190526040812054829010156100c3576100f5565b6100b16004355b600160a060020a0381166000908152602081905260409020545b919050565b60408051918252519081900360200190f35b5033600160a060020a039081166000908152602081905260408082208054859003905591841681522080548201905560015b92915050565b60026040518360e060020a02815260040180838152602001828152602001925050506020604051808303818660325a03f4156100025750506040515191506100ac905056",
-    unlinked_binary: "6060604052600160a060020a033216600090815260208190526040902061271090556101408061002f6000396000f3606060405260e060020a60003504637bd703e8811461003157806390b98a111461005c578063f8b2cb4f1461008b575b005b6100b1600435600073__ConvertLib____________________________6396e4ee3d6100fb84610092565b6100b160043560243533600160a060020a0316600090815260208190526040812054829010156100c3576100f5565b6100b16004355b600160a060020a0381166000908152602081905260409020545b919050565b60408051918252519081900360200190f35b5033600160a060020a039081166000908152602081905260408082208054859003905591841681522080548201905560015b92915050565b60026040518360e060020a02815260040180838152602001828152602001925050506020604051808303818660325a03f4156100025750506040515191506100ac905056",
-    address: "0xebbe3342a6a3033cb8d93576f06c44ff9608c294",
-    generated_with: "2.0.6",
-    contract_name: "MetaCoin"
-  };
-
-  function Contract() {
-    if (Contract.Pudding == null) {
-      throw new Error("MetaCoin error: Please call load() first before creating new instance of this contract.");
-    }
-
-    Contract.Pudding.apply(this, arguments);
-  };
-
-  Contract.load = function(Pudding) {
-    Contract.Pudding = Pudding;
-
-    Pudding.whisk(contract_data, Contract);
-
-    // Return itself for backwards compatibility.
-    return Contract;
-  }
-
-  Contract.new = function() {
-    if (Contract.Pudding == null) {
-      throw new Error("MetaCoin error: Please call load() first before calling new().");
-    }
-
-    return Contract.Pudding.new.apply(Contract, arguments);
-  };
-
-  Contract.at = function() {
-    if (Contract.Pudding == null) {
-      throw new Error("MetaCoin error: lease call load() first before calling at().");
-    }
-
-    return Contract.Pudding.at.apply(Contract, arguments);
-  };
-
-  Contract.deployed = function() {
-    if (Contract.Pudding == null) {
-      throw new Error("MetaCoin error: Please call load() first before calling deployed().");
-    }
-
-    return Contract.Pudding.deployed.apply(Contract, arguments);
-  };
-
-  if (typeof module != "undefined" && typeof module.exports != "undefined") {
-    module.exports = Contract;
-  } else {
-    // There will only be one version of Pudding in the browser,
-    // and we can use that.
-    window.MetaCoin = Contract;
-  }
-
-})();
-;
-
-// Factory "morphs" into a Pudding class.
-// The reasoning is that calling load in each context
-// is cumbersome.
-
-(function() {
-
-  var contract_data = {
-    abi: [{"constant":false,"inputs":[{"name":"newrate","type":"uint256"}],"name":"setRate","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"getRate","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[],"name":"destroy","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"royalty_rate","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"inputs":[],"type":"constructor"}],
-    binary: "606060405260008054600160a060020a0319163317905560b88060226000396000f3606060405260e060020a600035046334fcf43781146042578063679aefce14606057806383197ef014606e5780638da5cb5b146094578063dc1e9c451460a5575b005b604060043560005433600160a060020a0390811691161460ad5760b3565b6001545b6060908152602090f35b604060005433600160a060020a039081169116141560b657600054600160a060020a0316ff5b6064600054600160a060020a031681565b606460015481565b60018190555b50565b56",
-    unlinked_binary: "606060405260008054600160a060020a0319163317905560b88060226000396000f3606060405260e060020a600035046334fcf43781146042578063679aefce14606057806383197ef014606e5780638da5cb5b146094578063dc1e9c451460a5575b005b604060043560005433600160a060020a0390811691161460ad5760b3565b6001545b6060908152602090f35b604060005433600160a060020a039081169116141560b657600054600160a060020a0316ff5b6064600054600160a060020a031681565b606460015481565b60018190555b50565b56",
-    address: "0x2188859e828285894df289a4bc2cabb8767c1139",
+    abi: [{"constant":false,"inputs":[{"name":"newrate","type":"uint256"}],"name":"setRate","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"getRate","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[],"name":"destroy","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"royalty_rate","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"mymessage","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"inputs":[],"type":"constructor"}],
+    binary: "606060405260008054600160a060020a031916331790556001805560cf8060266000396000f360606040523615604f5760e060020a600035046334fcf43781146051578063679aefce14606f57806383197ef014607d5780638da5cb5b1460a3578063dc1e9c451460b4578063eb3a9bd81460bc575b005b604f60043560005433600160a060020a0390811691161460c45760ca565b6001545b6060908152602090f35b604f60005433600160a060020a039081169116141560cd57600054600160a060020a0316ff5b6073600054600160a060020a031681565b607360015481565b607360025481565b60018190555b50565b56",
+    unlinked_binary: "606060405260008054600160a060020a031916331790556001805560cf8060266000396000f360606040523615604f5760e060020a600035046334fcf43781146051578063679aefce14606f57806383197ef014607d5780638da5cb5b1460a3578063dc1e9c451460b4578063eb3a9bd81460bc575b005b604f60043560005433600160a060020a0390811691161460c45760ca565b6001545b6060908152602090f35b604f60005433600160a060020a039081169116141560cd57600054600160a060020a0316ff5b6073600054600160a060020a031681565b607360015481565b607360025481565b60018190555b50565b56",
+    address: "0x21bfbd3b80d5f1487bef6515b523f5273632c452",
     generated_with: "2.0.6",
     contract_name: "Policies"
   };
@@ -5936,17 +5869,17 @@ var Pudding =
 (function() {
 
   var contract_data = {
-    abi: [{"constant":false,"inputs":[],"name":"getSender","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[],"name":"destroy","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"getOwner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[],"type":"constructor"}],
-    binary: "606060405260008054600160a060020a03191633179055609d8060226000396000f3606060405260e060020a60003504635e01eb5a8114603857806383197ef014603f578063893d20e81460655780638da5cb5b146077575b005b6088335b90565b603660005433600160a060020a0390811691161415609b57600054600160a060020a0316ff5b6088600054600160a060020a0316603c565b6088600054600160a060020a031681565b600160a060020a03166060908152602090f35b56",
-    unlinked_binary: "606060405260008054600160a060020a03191633179055609d8060226000396000f3606060405260e060020a60003504635e01eb5a8114603857806383197ef014603f578063893d20e81460655780638da5cb5b146077575b005b6088335b90565b603660005433600160a060020a0390811691161415609b57600054600160a060020a0316ff5b6088600054600160a060020a0316603c565b6088600054600160a060020a031681565b600160a060020a03166060908152602090f35b56",
-    address: "0x16789923abfe3c918a8bf3d44262cae14d3f2c85",
+    abi: [{"constant":false,"inputs":[{"name":"addr","type":"address"}],"name":"getBalanceInEth","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"receiver","type":"address"},{"name":"amount","type":"uint256"}],"name":"sendCoin","outputs":[{"name":"sufficient","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"addr","type":"address"}],"name":"getBalance","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"inputs":[],"type":"constructor"}],
+    binary: "6060604052600160a060020a033216600090815260208190526040902061271090556101408061002f6000396000f3606060405260e060020a60003504637bd703e8811461003157806390b98a111461005c578063f8b2cb4f1461008b575b005b6100b1600435600073bb1646d74c58802542eed912c2d3f7e9c2963a456396e4ee3d6100fb84610092565b6100b160043560243533600160a060020a0316600090815260208190526040812054829010156100c3576100f5565b6100b16004355b600160a060020a0381166000908152602081905260409020545b919050565b60408051918252519081900360200190f35b5033600160a060020a039081166000908152602081905260408082208054859003905591841681522080548201905560015b92915050565b60026040518360e060020a02815260040180838152602001828152602001925050506020604051808303818660325a03f4156100025750506040515191506100ac905056",
+    unlinked_binary: "6060604052600160a060020a033216600090815260208190526040902061271090556101408061002f6000396000f3606060405260e060020a60003504637bd703e8811461003157806390b98a111461005c578063f8b2cb4f1461008b575b005b6100b1600435600073__ConvertLib____________________________6396e4ee3d6100fb84610092565b6100b160043560243533600160a060020a0316600090815260208190526040812054829010156100c3576100f5565b6100b16004355b600160a060020a0381166000908152602081905260409020545b919050565b60408051918252519081900360200190f35b5033600160a060020a039081166000908152602081905260408082208054859003905591841681522080548201905560015b92915050565b60026040518360e060020a02815260040180838152602001828152602001925050506020604051808303818660325a03f4156100025750506040515191506100ac905056",
+    address: "0x30f885abbd5d2b2b4b57988e088da00e4f3dc6dc",
     generated_with: "2.0.6",
-    contract_name: "Royalty"
+    contract_name: "MetaCoin"
   };
 
   function Contract() {
     if (Contract.Pudding == null) {
-      throw new Error("Royalty error: Please call load() first before creating new instance of this contract.");
+      throw new Error("MetaCoin error: Please call load() first before creating new instance of this contract.");
     }
 
     Contract.Pudding.apply(this, arguments);
@@ -5963,7 +5896,7 @@ var Pudding =
 
   Contract.new = function() {
     if (Contract.Pudding == null) {
-      throw new Error("Royalty error: Please call load() first before calling new().");
+      throw new Error("MetaCoin error: Please call load() first before calling new().");
     }
 
     return Contract.Pudding.new.apply(Contract, arguments);
@@ -5971,7 +5904,7 @@ var Pudding =
 
   Contract.at = function() {
     if (Contract.Pudding == null) {
-      throw new Error("Royalty error: lease call load() first before calling at().");
+      throw new Error("MetaCoin error: lease call load() first before calling at().");
     }
 
     return Contract.Pudding.at.apply(Contract, arguments);
@@ -5979,7 +5912,7 @@ var Pudding =
 
   Contract.deployed = function() {
     if (Contract.Pudding == null) {
-      throw new Error("Royalty error: Please call load() first before calling deployed().");
+      throw new Error("MetaCoin error: Please call load() first before calling deployed().");
     }
 
     return Contract.Pudding.deployed.apply(Contract, arguments);
@@ -5990,7 +5923,7 @@ var Pudding =
   } else {
     // There will only be one version of Pudding in the browser,
     // and we can use that.
-    window.Royalty = Contract;
+    window.MetaCoin = Contract;
   }
 
 })();
@@ -6006,7 +5939,7 @@ var Pudding =
     abi: [{"constant":false,"inputs":[{"name":"recipient","type":"address"},{"name":"amount","type":"uint256"}],"name":"refundTicket","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"destroy","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"newquota","type":"uint256"}],"name":"changeQuota","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"quota","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"numRegistrants","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[],"name":"buyTicket","outputs":[{"name":"success","type":"bool"}],"type":"function"},{"inputs":[],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_from","type":"address"},{"indexed":false,"name":"_amount","type":"uint256"}],"name":"Deposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_to","type":"address"},{"indexed":false,"name":"_amount","type":"uint256"}],"name":"Refund","type":"event"}],
     binary: "606060405260008054600160a060020a031916331781556101f460035560025561025d8061002d6000396000f3606060405236156100615760e060020a6000350463705099b9811461006357806383197ef01461008a5780638da5cb5b146100b4578063a977c71e146100c6578063cebe09c9146100e9578063ec3a6f73146100f2578063edca914c146100fb575b005b61006160043560243560008054600160a060020a0390811633919091161461018257610256565b610061600054600160a060020a039081163391909116141561025b57600054600160a060020a0316ff5b610112600054600160a060020a031681565b610061600435600054600160a060020a039081163391909116146101795761017f565b61011260035481565b61011260025481565b610112600354600254600091901061011c57610176565b6060908152602090f35b600160a060020a03331680825260016020819052604080842034908190556002805490930190925560609283526080919091527fe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c91a15060015b90565b60038190555b50565b600160a060020a038316815260016020526040812054821415610256575030600160a060020a0381163182901061025657600160a060020a038316600083606082818181858883f193505050505060006001600050600085600160a060020a03168152602001908152602001600020600050819055506002600081815054809291906001900391905055507fbb28353e4598c3b9199101a66e0989549b659a59a54d2c27fbb183f1932c8e6d83836040518083600160a060020a031681526020018281526020019250505060405180910390a15b505050565b56",
     unlinked_binary: "606060405260008054600160a060020a031916331781556101f460035560025561025d8061002d6000396000f3606060405236156100615760e060020a6000350463705099b9811461006357806383197ef01461008a5780638da5cb5b146100b4578063a977c71e146100c6578063cebe09c9146100e9578063ec3a6f73146100f2578063edca914c146100fb575b005b61006160043560243560008054600160a060020a0390811633919091161461018257610256565b610061600054600160a060020a039081163391909116141561025b57600054600160a060020a0316ff5b610112600054600160a060020a031681565b610061600435600054600160a060020a039081163391909116146101795761017f565b61011260035481565b61011260025481565b610112600354600254600091901061011c57610176565b6060908152602090f35b600160a060020a03331680825260016020819052604080842034908190556002805490930190925560609283526080919091527fe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c91a15060015b90565b60038190555b50565b600160a060020a038316815260016020526040812054821415610256575030600160a060020a0381163182901061025657600160a060020a038316600083606082818181858883f193505050505060006001600050600085600160a060020a03168152602001908152602001600020600050819055506002600081815054809291906001900391905055507fbb28353e4598c3b9199101a66e0989549b659a59a54d2c27fbb183f1932c8e6d83836040518083600160a060020a031681526020018281526020019250505060405180910390a15b505050565b56",
-    address: "0x1f70ce08f8c443e8b6259d6b79a13d2f367f16c7",
+    address: "0x10245fd871227f37e66e65c9d141f4dd162bd2c5",
     generated_with: "2.0.6",
     contract_name: "Ticketbooth"
   };
@@ -6063,6 +5996,73 @@ var Pudding =
 })();
 ;
 
+// Factory "morphs" into a Pudding class.
+// The reasoning is that calling load in each context
+// is cumbersome.
+
+(function() {
+
+  var contract_data = {
+    abi: [{"constant":true,"inputs":[],"name":"called","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[],"name":"getSender","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"policies","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[],"name":"destroy","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"getOwner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[],"name":"callPolicies","outputs":[],"type":"function"},{"inputs":[],"type":"constructor"}],
+    binary: "606060405260008054600160a060020a03191633179055610152806100246000396000f3606060405236156100615760e060020a600035046350f9b6cd81146100635780635e01eb5a1461006c578063702e7e1f1461007457806383197ef014610086578063893d20e8146100ae5780638da5cb5b146100c2578063966d3292146100d4575b005b61013560035481565b61013f335b90565b61013f600254600160a060020a031681565b61006160005433600160a060020a039081169116141561013357600054600160a060020a0316ff5b61013f600054600160a060020a0316610071565b61013f600054600160a060020a031681565b6002547f679aefce00000000000000000000000000000000000000000000000000000000606090815261006191600160a060020a03169063679aefce906064906020906004816000876161da5a03f11561000257505060405151600355505b565b6060908152602090f35b600160a060020a03166060908152602090f3",
+    unlinked_binary: "606060405260008054600160a060020a03191633179055610152806100246000396000f3606060405236156100615760e060020a600035046350f9b6cd81146100635780635e01eb5a1461006c578063702e7e1f1461007457806383197ef014610086578063893d20e8146100ae5780638da5cb5b146100c2578063966d3292146100d4575b005b61013560035481565b61013f335b90565b61013f600254600160a060020a031681565b61006160005433600160a060020a039081169116141561013357600054600160a060020a0316ff5b61013f600054600160a060020a0316610071565b61013f600054600160a060020a031681565b6002547f679aefce00000000000000000000000000000000000000000000000000000000606090815261006191600160a060020a03169063679aefce906064906020906004816000876161da5a03f11561000257505060405151600355505b565b6060908152602090f35b600160a060020a03166060908152602090f3",
+    address: "0x2c6850ecbb08b0bd747675a1de375ffd02041080",
+    generated_with: "2.0.6",
+    contract_name: "Royalty"
+  };
+
+  function Contract() {
+    if (Contract.Pudding == null) {
+      throw new Error("Royalty error: Please call load() first before creating new instance of this contract.");
+    }
+
+    Contract.Pudding.apply(this, arguments);
+  };
+
+  Contract.load = function(Pudding) {
+    Contract.Pudding = Pudding;
+
+    Pudding.whisk(contract_data, Contract);
+
+    // Return itself for backwards compatibility.
+    return Contract;
+  }
+
+  Contract.new = function() {
+    if (Contract.Pudding == null) {
+      throw new Error("Royalty error: Please call load() first before calling new().");
+    }
+
+    return Contract.Pudding.new.apply(Contract, arguments);
+  };
+
+  Contract.at = function() {
+    if (Contract.Pudding == null) {
+      throw new Error("Royalty error: lease call load() first before calling at().");
+    }
+
+    return Contract.Pudding.at.apply(Contract, arguments);
+  };
+
+  Contract.deployed = function() {
+    if (Contract.Pudding == null) {
+      throw new Error("Royalty error: Please call load() first before calling deployed().");
+    }
+
+    return Contract.Pudding.deployed.apply(Contract, arguments);
+  };
+
+  if (typeof module != "undefined" && typeof module.exports != "undefined") {
+    module.exports = Contract;
+  } else {
+    // There will only be one version of Pudding in the browser,
+    // and we can use that.
+    window.Royalty = Contract;
+  }
+
+})();
+;
+
 
 
 
@@ -6075,6 +6075,7 @@ var account;
 var balance;
 var ethbal
 var coinbase;
+var called_rate;
 
 function setStatus(message) {
   var status = document.getElementById("status");
@@ -6083,6 +6084,11 @@ function setStatus(message) {
 
 function refreshBalance() {
   var meta = MetaCoin.deployed();
+  /*
+  Is this is Truffle method or native web3?
+  Can't write contract.deployed() from another contract... 
+  research: how contracts registered on deployment, how one contract finds another...
+  */
 
   meta.getBalance.call(account, {from: account}).then(function(value) {
     // {from: variable} --> is this truffle syntax?
@@ -6106,6 +6112,24 @@ function refreshETHBalance() {
   var base_el = document.getElementById("coinbase");
     base_el.innerHTML = coinbase;
 
+};
+
+function refreshPolicies() {
+  var policies = Policies.deployed();
+  console.log("policies: ",policies)
+  var policies_addr = document.getElementById("policies_addr");
+    policies_addr.innerHTML = policies.address;
+
+  var called_rate = policies.getRate.call().then(function(value){
+console.log("called_rate: ",value.toString(10))
+  })
+};
+
+function logRoyaltyAddr() {
+  var royalty = Royalty.deployed();
+  console.log("royalty: ",royalty)
+  var royalty_addr = document.getElementById("royalty_addr");
+    royalty_addr.innerHTML = royalty.address;
 };
 
 
@@ -6175,12 +6199,14 @@ window.onload = function() {
     var mainacct = document.getElementById("mainacct");
     mainacct.innerHTML = account;
 
-    weibal = web3.eth.getBalance(account).toString(10);
-    ethbal = web3.fromWei(weibal, 'gether')
+    ethbal = web3.eth.getBalance(account).toString(10);
+    // ethbal = web3.fromWei(weibal, 'gether')
     coinbase = web3.eth.coinbase
 
     refreshBalance();
     refreshETHBalance();
+    refreshPolicies();
+    logRoyaltyAddr();
 
   });
 
@@ -6216,5 +6242,5 @@ if (typeof web3 !== 'undefined') {
 
 Pudding.setWeb3(window.web3);                                 
 
-Pudding.load([ConvertLib, MetaCoin, Policies, Royalty, Ticketbooth], window);               
+Pudding.load([ConvertLib, Policies, MetaCoin, Ticketbooth, Royalty], window);               
 

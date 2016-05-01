@@ -21,7 +21,6 @@
 </head>
 
 <body>
-  
   <div class="panel panel-default">
     <div class="panel-heading">Network Summary</div>
       <table class="table">
@@ -48,10 +47,9 @@
             </tr>   
             <tr> 
                 <th scope="row">Policies Addr:</th> 
-                <td id=""></td> 
-            </tr>   
-          </tbody> 
-
+                <td id="policies_addr"></td> 
+            </tr>
+          </tbody>
       </table>
   </div>
 
@@ -71,8 +69,23 @@
                 <td id="balance"></td> 
                 <td id="ethbalance"></td> 
             </tr> 
-          </tbody> 
+          </tbody>
+      </table>
+  </div>
 
+<div class="panel panel-default">
+    <div class="panel-heading">Policies Summary</div>
+      <table class="table">
+          <tbody> 
+            <tr> 
+                <th scope="row">Royalty Addr:</th> 
+                <td id="royalty_addr"></td>
+            </tr>   
+            <tr> 
+                <th scope="row">Royalty Rate</th> 
+                <td id="royalty"></td> 
+            </tr> 
+          </tbody> 
       </table>
   </div>
 
@@ -96,6 +109,7 @@
 
       </table>
   </div>
+
   <button id="showme" onclick="showme()">Execute Transaction</button>
 
   <br>

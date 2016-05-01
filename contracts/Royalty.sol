@@ -6,7 +6,7 @@ contract Royalty {
 	address public owner;
 	mapping (address => uint) balances;
 	Policies public policies;
-	string	public called;
+	uint	public called;
 
 
 	function Royalty(){
@@ -14,7 +14,7 @@ contract Royalty {
 	}
 
 	function callPolicies(){
-		called = policies.getMessage();
+		called = policies.getRate();
 		/* !!!
 		NO-GO. Can't return dynamically-sized objects.
 		Returning arrays also problematic.

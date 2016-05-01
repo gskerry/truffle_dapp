@@ -6,6 +6,7 @@ var account;
 var balance;
 var ethbal
 var coinbase;
+var called_rate;
 
 function setStatus(message) {
   var status = document.getElementById("status");
@@ -42,6 +43,24 @@ function refreshETHBalance() {
   var base_el = document.getElementById("coinbase");
     base_el.innerHTML = coinbase;
 
+};
+
+function refreshPolicies() {
+  var policies = Policies.deployed();
+  console.log("policies: ",policies)
+  var policies_addr = document.getElementById("policies_addr");
+    policies_addr.innerHTML = policies.address;
+
+  var called_rate = policies.getRate.call().then(function(value){
+console.log("called_rate: ",value.toString(10))
+  })
+};
+
+function logRoyaltyAddr() {
+  var royalty = Royalty.deployed();
+  console.log("royalty: ",royalty)
+  var royalty_addr = document.getElementById("royalty_addr");
+    royalty_addr.innerHTML = royalty.address;
 };
 
 
@@ -117,6 +136,8 @@ window.onload = function() {
 
     refreshBalance();
     refreshETHBalance();
+    refreshPolicies();
+    logRoyaltyAddr();
 
   });
 
