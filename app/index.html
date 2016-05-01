@@ -45,10 +45,6 @@
                 <th scope="row">Coinbase:</th> 
                 <td id="coinbase"></td> 
             </tr>   
-            <tr> 
-                <th scope="row">Policies Addr:</th> 
-                <td id="policies_addr"></td> 
-            </tr>
           </tbody>
       </table>
   </div>
@@ -78,21 +74,25 @@
       <table class="table">
           <tbody> 
             <tr> 
-                <th scope="row">Royalty Addr:</th> 
-                <td id="royalty_addr"></td>
+                <th scope="row">Contract Addr:</th> 
+                <td id="policies_addr"></td>
             </tr>   
             <tr> 
                 <th scope="row">Royalty Rate</th> 
-                <td id="royalty"></td> 
+                <td id="policy_rate"></td> 
             </tr> 
           </tbody> 
       </table>
   </div>
 
   <div class="panel panel-default">
-    <div class="panel-heading">Transaction Execution Summary</div>
+    <div class="panel-heading">Contract Execution Summary</div>
       <table class="table">
           <tbody> 
+            <tr> 
+                <th scope="row">Contract Addr:</th> 
+                <td id="royalty_addr"></td>
+            </tr>   
             <tr> 
                 <th scope="row">Transaction Block</th> 
                 <td id="">??</td> 
@@ -102,15 +102,19 @@
                 <td id="owner"></td> 
             </tr>   
             <tr> 
-                <th scope="row">Initiated by:</th> 
+                <th scope="row">Initiated by (Payor):</th> 
                 <td id="txsender"></td> 
+            </tr>   
+            <tr> 
+                <th scope="row">Payor Balance:</th> 
+                <td id="payorBal"></td> 
             </tr>   
           </tbody> 
 
       </table>
   </div>
 
-  <button id="showme" onclick="showme()">Execute Transaction</button>
+  <button id="execute" onclick="executeRoyalty()">Execute (Royalty) Contract</button>
 
   <br>
   <h4>Metacoin Send</h4>

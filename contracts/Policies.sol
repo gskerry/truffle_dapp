@@ -9,7 +9,7 @@ contract Policies {
 		owner = msg.sender;
 		// royalty_rate = 0.07; // NO. "invalid literal value error"
 		// royalty_rate = 1 / 2;
-		royalty_rate = 1;
+		royalty_rate = 2;
 	}
 
 	// function getMessage() returns(uint){

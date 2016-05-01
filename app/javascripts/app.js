@@ -1,6 +1,4 @@
 
-console.log("HELLO")
-
 var accounts;
 var account;
 var balance;
@@ -31,8 +29,6 @@ function refreshBalance() {
   });
 };
 
-/* THIS ONE!  */
-
 function refreshETHBalance() {
   web3.eth.getBalance(account, function(value) {
     console.log("Value: ",value)
@@ -45,46 +41,31 @@ function refreshETHBalance() {
 
 };
 
-function refreshPolicies() {
-  var policies = Policies.deployed();
-  console.log("policies: ",policies)
-  var policies_addr = document.getElementById("policies_addr");
-    policies_addr.innerHTML = policies.address;
 
-  var called_rate = policies.getRate.call().then(function(value){
-console.log("called_rate: ",value.toString(10))
-  })
+function refreshPolicies() {
+
+   var policies = Policies.deployed();
+   console.log("policies: ",policies)
+
+   var policies_addr = document.getElementById("policies_addr");
+   policies_addr.innerHTML = policies.address;
+
+   var policies_rate = policies.getRate.call().then(function(value){
+      console.log("called_rate: ",value)
+      var policy_rate = document.getElementById("policy_rate");
+      policy_rate.innerHTML = value;      
+
+   })
 };
 
-function logRoyaltyAddr() {
+
+function executeRoyalty(){
+
   var royalty = Royalty.deployed();
   console.log("royalty: ",royalty)
+
   var royalty_addr = document.getElementById("royalty_addr");
-    royalty_addr.innerHTML = royalty.address;
-};
-
-
-function sendCoin() {
-  var meta = MetaCoin.deployed();
-
-  var amount = parseInt(document.getElementById("amount").value);
-  var receiver = document.getElementById("receiver").value;
-
-  setStatus("Initiating transaction... (please wait)");
-
-  meta.sendCoin(receiver, amount, {from: account}).then(function() {
-    setStatus("Transaction complete!");
-    refreshBalance();
-  }).catch(function(e) {
-    console.log(e);
-    setStatus("Error sending coin; see log.");
-  });
-};
-
-
-function showme(){
-
-  var royalty = Royalty.deployed();
+  royalty_addr.innerHTML = royalty.address;
 
   royalty.getOwner.call()
     .then(function(owner) {
@@ -104,8 +85,38 @@ function showme(){
       setStatus("Error getting owner; see log.");
   });
 
+    royalty.setPayorBal.call()
+      .then(function(){
+         royalty.getPayorBal.call()
+      }).then(function(val){
+         var payorBal = document.getElementById("payorBal");
+         payorBal.innerHTML = val;
+      }).catch(function(e){
+         console.log("err",e)
+      })
+
 
 }
+
+
+
+function sendCoin() {
+  var meta = MetaCoin.deployed();
+
+  var amount = parseInt(document.getElementById("amount").value);
+  var receiver = document.getElementById("receiver").value;
+
+  setStatus("Initiating transaction... (please wait)");
+
+  meta.sendCoin(receiver, amount, {from: account}).then(function() {
+    setStatus("Transaction complete!");
+    refreshBalance();
+  }).catch(function(e) {
+    console.log(e);
+    setStatus("Error sending coin; see log.");
+  });
+};
+
 
 window.onload = function() {
   
@@ -137,7 +148,6 @@ window.onload = function() {
     refreshBalance();
     refreshETHBalance();
     refreshPolicies();
-    logRoyaltyAddr();
 
   });
 
