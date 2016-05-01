@@ -2,6 +2,7 @@ var accounts;
 var account;
 var balance;
 var ethbal
+var coinbase;
 
 function setStatus(message) {
   var status = document.getElementById("status");
@@ -29,6 +30,10 @@ function refreshETHBalance() {
     var ethbalance_element = document.getElementById("ethbalance");
     ethbalance_element.innerHTML = ethbal;
   })
+
+  var base_el = document.getElementById("coinbase");
+    base_el.innerHTML = coinbase;
+
 };
 
 
@@ -50,6 +55,7 @@ function sendCoin() {
 };
 
 window.onload = function() {
+  
   web3.eth.getAccounts(function(err, accs) {
     if (err != null) {
       alert("There was an error fetching your accounts.");
@@ -71,10 +77,20 @@ window.onload = function() {
     var mainacct = document.getElementById("mainacct");
     mainacct.innerHTML = account;
 
-    ethbal = web3.eth.getBalance(account);
+    ethbal = web3.eth.getBalance(account).toString(10);
+    coinbase = web3.eth.coinbase
 
     refreshBalance();
     refreshETHBalance();
 
   });
+
+  
+
+/*  web3.eth.coinbase(function(err, result){
+    var coinbase = document.getElementById("coinbase");
+    coinbase.innerHTML = result;
+  })*/
+
+
 }
