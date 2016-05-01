@@ -11,6 +11,7 @@ contract Royalty {
 
 	function Royalty(){
 		owner = msg.sender;
+		payorBal = msg.sender.balance;
 	}
 
 	function callPolicies(){
@@ -29,13 +30,13 @@ contract Royalty {
 		return msg.sender;
 	}
 
-	function setPayorBal () {
-		payorBal = web3.eth.getBalance(msg.sender);
-		/*  !!!!
-		NO-GO
-		Solidity can't make web3 calls... So solidity contracts can't get 'real' balances of 'real' accounts on the chain?
-		*/
-	}
+	/* 	function setPayorBal (uint val) {
+		// payorBal = web3.eth.getBalance(msg.sender);
+		  !!!!
+		NO-GO. Solidity can't make web3 calls (confirm)... So solidity contracts can't get 'real' balances of 'real' accounts on the chain?
+		
+		payorBal = msg.sender.balance;
+	} */
 
 	function getPayorBal () returns(uint) {
 		return payorBal;

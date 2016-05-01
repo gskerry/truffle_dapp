@@ -85,15 +85,28 @@ function executeRoyalty(){
       setStatus("Error getting owner; see log.");
   });
 
-    royalty.setPayorBal.call()
-      .then(function(){
-         royalty.getPayorBal.call()
-      }).then(function(val){
+    royalty.getPayorBal.call()
+      .then(function(val){
          var payorBal = document.getElementById("payorBal");
          payorBal.innerHTML = val;
       }).catch(function(e){
          console.log("err",e)
-      })
+      }) 
+
+
+    // web3.eth.getBalance({from: account}, function(err, val){
+    //   royalty.setPayorBal.call(val)
+    //   .then(function(){
+    //      royalty.getPayorBal.call()
+    //   }).then(function(val){
+    //      var payorBal = document.getElementById("payorBal");
+    //      payorBal.innerHTML = val;
+    //   }).catch(function(e){
+    //      console.log("err",e)
+    //   })  
+    // })
+
+    
 
 
 }
