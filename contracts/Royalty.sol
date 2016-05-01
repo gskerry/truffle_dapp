@@ -1,11 +1,24 @@
 
+import "Policies.sol";
+
 contract Royalty {
 	
 	address public owner;
 	mapping (address => uint) balances;
+	Policies public policies;
+	string	public called;
+
 
 	function Royalty(){
 		owner = msg.sender;
+	}
+
+	function callPolicies(){
+		called = policies.getMessage();
+		/* !!!
+		NO-GO. Can't return dynamically-sized objects.
+		Returning arrays also problematic.
+		*/
 	}
 
 	function getOwner() returns(address) {

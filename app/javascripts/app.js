@@ -14,6 +14,11 @@ function setStatus(message) {
 
 function refreshBalance() {
   var meta = MetaCoin.deployed();
+  /*
+  Is this is Truffle method or native web3?
+  Can't write contract.deployed() from another contract... 
+  research: how contracts registered on deployment, how one contract finds another...
+  */
 
   meta.getBalance.call(account, {from: account}).then(function(value) {
     // {from: variable} --> is this truffle syntax?
@@ -107,6 +112,7 @@ window.onload = function() {
     mainacct.innerHTML = account;
 
     ethbal = web3.eth.getBalance(account).toString(10);
+    // ethbal = web3.fromWei(weibal, 'gether')
     coinbase = web3.eth.coinbase
 
     refreshBalance();
