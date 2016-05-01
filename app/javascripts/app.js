@@ -57,9 +57,9 @@ function sendCoin() {
 
 function showme(){
 
-  var showme = Showme.deployed();
+  var royalty = Royalty.deployed();
 
-  showme.getOwner.call()
+  royalty.getOwner.call()
     .then(function(owner) {
       var owner_element = document.getElementById("owner");
       owner_element.innerHTML = owner;
@@ -68,7 +68,7 @@ function showme(){
       setStatus("Error getting owner; see log.");
   });
 
-  showme.getSender.call({from: account})
+  royalty.getSender.call({from: account})
     .then(function(sender) {
       var sender_element = document.getElementById("txsender");
       sender_element.innerHTML = sender;

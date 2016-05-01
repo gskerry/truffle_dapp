@@ -1,10 +1,10 @@
 
-contract Showme {
+contract Royalty {
 	
 	address public owner;
 	mapping (address => uint) balances;
 
-	function Showme(){
+	function Royalty(){
 		owner = msg.sender;
 	}
 
