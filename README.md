@@ -22,6 +22,7 @@ Run testnet
 (From project directory) compile and deploy contracts to testnet 
 
 `$ truffle compile`
+
 `$ truffle deploy`
 
 Serve app
