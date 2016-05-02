@@ -30,13 +30,20 @@ contract Royalty {
 		return msg.sender;
 	}
 
-	/* 	function setPayorBal (uint val) {
-		// payorBal = web3.eth.getBalance(msg.sender);
-		  !!!!
-		NO-GO. Solidity can't make web3 calls (confirm)... So solidity contracts can't get 'real' balances of 'real' accounts on the chain?
+	 	
+	// function setPayorBal (uint val) {
+	// 	payorBal = web3.eth.getBalance(msg.sender);
+	// 	...
+	// }
+	/*
+		NO! Per Karl... contracts are imported/compiled/appended to single large app on EVM. All objects accessible (certainly with some exceptions) 
 		
-		payorBal = msg.sender.balance;
-	} */
+		See above... already have access "msg.sender.balance"... simple object notation.  
+		
+		Though...
+		 - is msg.sender.balance property somehow set during compilation? deployment? 
+		 - or does EVM interpolate msg.sender to an address, then return property of realAddress.balance?
+	*/
 
 	function getPayorBal () returns(uint) {
 		return payorBal;

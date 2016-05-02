@@ -14,13 +14,12 @@ function setStatus(message) {
 function refreshBalance() {
   var meta = MetaCoin.deployed();
   /*
-  Is this is Truffle method or native web3?
-  Can't write contract.deployed() from another contract... 
-  research: how contracts registered on deployment, how one contract finds another...
+  per Karl, Truffle framework internal, part of deploy function storing this address information and offering as class instance.
+  (!) though keep in mind Truffle deploy function deploys new instances of contracts on chain each time... address changes. 
   */
 
   meta.getBalance.call(account, {from: account}).then(function(value) {
-    // {from: variable} --> is this truffle syntax?
+    // {from: variable} --> Truffle keyword syntax. Somehow pings current account address. Cool. 
     var balance_element = document.getElementById("balance");
     balance_element.innerHTML = value.valueOf();
   }).catch(function(e) {
